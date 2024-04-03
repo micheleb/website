@@ -2,17 +2,9 @@
 import { formatDistanceToNow } from "date-fns";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
 
 const developingFor = formatDistanceToNow(new Date("2009-11-01"));
 const rnFor = formatDistanceToNow(new Date("2018-06-01"));
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -63,43 +55,24 @@ const last_posts = posts.slice(0, 3);
   <HorizontalCard
     title="NDA Project"
     img="/post_img.webp"
-    desc="I'm currently working as Principal Engineer on React Native TV apps for a company I'm not allowed to mention 🤫"
+    desc="I'm currently working as a Principal Engineer on React Native TV apps for a company I'm not allowed to mention 🤫."
     badge="In Progress"
     url="#"
   />
   <HorizontalCard
     title="JustWatch (2021-2024)"
     img="/post_img.webp"
-    desc="JustWatch is one of the biggest Streaming Guides in the world, helping millions of users finding what to watch (and where) every month. I rewrote their mobile apps from scratch in React Native and led the mobile team for about a year. Before that, I revamped their TV apps, also written in React Native."
+    desc="JustWatch is one of the biggest streaming guides in the world, helping millions of users find what to watch (and where) every month. I rewrote their mobile apps from scratch in React Native and led the mobile team for about a year. Before that, I revamped their TV apps, also written in React Native."
     url="https://justwatch.com"
   />
   <HorizontalCard
     title="Urbi (2017-2021)"
     img="/post_img.webp"
-    desc="Urbi is a Shared Mobility aggregator, guiding its users through the maze of car, scooter, and bike sharing offerings in their cities. I initially worked on the Spring Boot based Backend, and moved on to rewrite their mobile apps from scratch in React Native."
+    desc="Urbi is a shared mobility aggregator, guiding its users through the maze of car, scooter, and bike-sharing offerings in their cities. I initially worked on the Spring Boot-based backend and later moved on to rewrite their mobile apps from scratch in React Native."
     url="https://en.urbi.co/"
   />
 
   <div class="mt-4 text-center">
     <a class="btn" href="/projects" target="_self">See more</a>
   </div>
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-4 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-      </>
-    ))
-  }
 </BaseLayout>

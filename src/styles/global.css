@@ -1,3 +1,9 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/NunitoVariable.woff2') format('woff2-variations');
+    font-weight: 200 400 600 700 900;
+}

@@ -57,33 +57,35 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-4">My latest projects {"</>"}</div>
   </div>
 
   <HorizontalCard
     title="NDA Project"
     img="/post_img.webp"
-    desc="I'm currently working as Principal Engineer on TV apps for a company I'm not allowed to mention 🤫"
-    badge="Freelancing"
+    desc="I'm currently working as Principal Engineer on React Native TV apps for a company I'm not allowed to mention 🤫"
+    badge="In Progress"
     url="#"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
-    title="JustWatch"
+    title="JustWatch (2021-2024)"
     img="/post_img.webp"
     desc="JustWatch is one of the biggest Streaming Guides in the world, helping millions of users finding what to watch (and where) every month. I rewrote their mobile apps from scratch in React Native and led the mobile team for about a year. Before that, I revamped their TV apps, also written in React Native."
     url="https://justwatch.com"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
-    title="Urbi"
+    title="Urbi (2017-2021)"
     img="/post_img.webp"
-    desc="Urbi is a Shared Mobility aggregator, guiding its users through the maze of car, scooter, and bike sharing offers in their cities. I initially worked on the Spring Boot based Backend, and moved on to rewrite their mobile apps from scratch in React Native."
+    desc="Urbi is a Shared Mobility aggregator, guiding its users through the maze of car, scooter, and bike sharing offerings in their cities. I initially worked on the Spring Boot based Backend, and moved on to rewrite their mobile apps from scratch in React Native."
     url="https://en.urbi.co/"
   />
 
+  <div class="mt-4 text-center">
+    <a class="btn" href="/projects" target="_self">See more</a>
+  </div>
+
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="text-3xl w-full font-bold mb-4 mt-10">Latest from blog</div>
   </div>
 
   {
@@ -97,7 +99,6 @@ const last_posts = posts.slice(0, 3);
           target="_self"
           badge={post.data.badge}
         />
-        <div class="divider my-0" />
       </>
     ))
   }

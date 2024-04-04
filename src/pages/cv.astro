@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import type { minutesInDay } from "date-fns/constants";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
@@ -9,8 +10,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-10 text-justify">
-    Believe it or not, I've been doing a few things over the years. Here's the
-    same story that you can find on LinkedIn, just with a different layout.
+    <p>
+      Believe it or not, I've been up to quite a bit over the years. Here's a
+      more detailed account of my professional journey than what you might find
+      on LinkedIn.
+    </p>
+    <p class="my-4">
+      For some reason, PDFs are still all the rage for resumés, so here's where
+      you can get mine.
+    </p>
+    <a class="btn" href="/bonazza-cv.pdf" download>Download PDF</a>
   </div>
 
   <div class="mb-5">
@@ -49,12 +58,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         "ESlint",
       ]}
     >
-      Cannot say much as I signed an NDA, but I'm working on a TV app project in
-      React Native. In this role, I'm training engineers new to the technology,
-      reviewing PRs, organizing pair programming sessions / workshops, and all
-      around sharing my knowledge of the React Native world. I also write code,
-      but mostly to improve the Developer Experience and to help build better
-      processes, with a focus on performance and testing.
+      Cannot say much as I've signed an NDA, but I'm working on a TV app project
+      in React Native. In this role, I'm training engineers new to the
+      technology, reviewing PRs, organizing pair programming sessions and
+      workshops, and sharing my knowledge of the React Native world. I also
+      write code, primarily to improve the Developer Experience and to help
+      build better processes, with a focus on performance and testing.
     </TimeLineElement>
     <TimeLineElement
       title="Senior Frontend Developer at JustWatch"
@@ -75,11 +84,31 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         "Product Ownership",
       ]}
     >
-      JustWatch is one of the biggest streaming guides in the world, helping
-      millions of users find what to watch (and where) every month. I rewrote
-      their mobile apps from scratch in React Native and led the mobile team for
-      about a year. Before that, I revamped their TV apps, also written in React
-      Native.
+      <p>
+        <a class="underline" href="https://justwatch.com" target="_blank"
+          >JustWatch</a
+        > is one of the largest streaming guides in the world, helping millions of
+        users find what to watch (and where) every month. I rewrote their mobile
+        apps from scratch in React Native and led the mobile team for about a year.
+      </p>
+      <p class="mt-2">
+        To support the new app, I also built a new Design System and Component
+        Library using Storybook, as well as a React + Node.js based tool to
+        proxy <a class="underline" href="https://snowplow.io/" target="_blank"
+          >Snowplow</a
+        > events so that they can be inspected from a Desktop browser, even when
+        sent by mobile devices.
+      </p>
+      <p class="mt-2">
+        Before that, I revamped their TV apps, also developed in React Native,
+        migrating the codebase to TypeScript and enhancing performance. This
+        allowed the apps to run on lower-end Android TV sticks and Samsung and
+        LG TVs. I developed a "Play on TV" feature connecting the TV Apps with
+        the older Vue-based mobile apps. The feature was later ported to the new
+        apps as well, and uses either Google Cast or the SSDP protocol (for Roku
+        devices), with a fallback to GraphQL Subscription based Websockets for
+        broader compatibility.
+      </p>
     </TimeLineElement>
     <TimeLineElement
       title="Senior FullStack Developer at URBI"
@@ -87,6 +116,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       skills={[
         "React Native",
         "React",
+        "Node.js",
         "TypeScript",
         "JavaScript",
         "Java",
@@ -98,13 +128,14 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         "",
       ]}
     >
-      Urbi is a shared mobility aggregator, guiding its users through the maze
-      of car, scooter, and bike-sharing offerings in their cities. I initially
-      worked on the Spring Boot-based backend and later moved on to rewrite
-      their mobile apps from scratch in React Native. I also developed a B2B
-      dashboard in React and its backend in Spring Boot + Kotlin, as well as a
-      React Native prototype for a digital wallet app to manage driving licenses
-      validation on Ethereum.
+      <a class="underline" href="https://en.urbi.co" target="_blank">URBI</a>
+      is a shared mobility aggregator that guides its users through the maze of car,
+      scooter, and bike-sharing offerings in their cities. I initially worked on
+      the Spring Boot-based backend and later transitioned to rewriting their mobile
+      apps from scratch in React Native. Additionally, I developed a B2B dashboard
+      using React for the frontend and Spring Boot + Kotlin for the backend. I also
+      created a React Native prototype for a digital wallet app designed to manage
+      driving license validation on the Ethereum blockchain.
     </TimeLineElement>
     <TimeLineElement
       title="FullStack Developer - Freelance"
@@ -121,12 +152,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         "SCADA",
       ]}
     >
-      I developed a full stack, React + Flask application to interconnect
-      multiple monitoring systems (sensors, cameras, variable message signs,
-      traffic lights, weather stations, &hellip;) into a single administrative
-      interface. I cannot disclose the name of the company for which I did this
-      as once again, I signed an NDA. The app was used (and maybe still is?) to
-      manage a section of Italy's highway infrastructure.
+      I developed a full-stack application using React and Flask to interconnect
+      multiple monitoring systems—such as sensors, cameras, variable message
+      signs, traffic lights, and weather stations—into a single administrative
+      interface. Due to an NDA, I cannot disclose the name of the company for
+      which I completed this project. The application was used, and possibly
+      still is, to manage a section of Italy's highway infrastructure.
     </TimeLineElement>
     <TimeLineElement
       title="Cofounder at SketchTogether"
@@ -147,18 +178,76 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         "Devops",
       ]}
     >
-      SketchTogether was a real-time collaborative whiteboard helping teams
-      quickly jot down ideas, with a focus on reducing mode-switching as much as
-      possible. Users would circle around parts of their sketches to quickly
-      select elements and move them around, clone them, or edit them. Despite a
-      loyal user base that let us keep SketchTogether afloat after we stopped
-      focusing on it in 2017, we decided to sunset the product in December 2023,
-      as more modern apps are now available and we no longer had the resources
-      to invest in the project. I developed the Java backend application and
-      took care of the infrastructure on Google Cloud, as well as designed the
-      web app that was implemented by the other cofounder. I eventually stepped
-      in on the web side of things as well, and later added some Python micro
-      services to support new features.
+      <p>
+        SketchTogether was a real-time collaborative whiteboard designed to help
+        teams quickly jot down ideas, with a focus on minimizing mode-switching
+        as much as possible. Users could circle parts of their sketches to
+        quickly select elements, move them around, clone, or edit them.
+      </p>
+      <p class="mt-2">
+        Despite a loyal user base that allowed us to keep SketchTogether afloat
+        after shifting our focus away from it in 2017, we decided to sunset the
+        product in December 2023. This decision was due to the availability of
+        more modern apps and our lack of resources to invest in the project.
+      </p>
+      <p class="mt-2">
+        I developed the Java backend application, managed the infrastructure on
+        Google Cloud, and designed the web app, which was implemented in
+        AngularJS by the other co-founder. I also contributed to the web
+        development later on and added some Python microservices to support new
+        features.
+      </p>
+    </TimeLineElement>
+    <TimeLineElement
+      title="PhD Student at Università di Padova"
+      subtitle="From January 2011 to April 2015 - Padova, Italy (and Irvine, California)"
+      skills={["Java", "Python", "Bash", "Android", "Sysadmin"]}
+    >
+      <p>
+        I initially worked on setting up a 16-node cluster based on high-end
+        desktops connected by 10G-Ethernet, developing an administrative tool
+        based on Gluster. I met with several scientists from the Engineering,
+        Physics, and Astrophysics fields and helped them learn how to run their
+        computational heavy tasks on this new cluster.
+      </p>
+      <p class="mt-2">
+        Since the project was struggling to take off, I completely changed the
+        subject of my thesis to developing an Android tablets-based solution for
+        dermatologists to organize their skin lesions mapping sessions. Together
+        with dermatologists from the Univeristy of Padova, we came up with a
+        novel streamlined process to speed up and standardize their current
+        practice, now supported by a new Android app I built with 3 other grad
+        students.
+      </p>
+      <p class="mt-2">
+        During my PhD, I spent 4 months at University of California, Irvine,
+        where I worked on an Android prototype for <a
+          class="underline"
+          href="http://sdcl.ics.uci.edu/research/past-projects/calico/"
+          >Calico</a
+        >, a sketch-based design environment that we later on took as
+        theoretical basis for SketchTogether, the startup I co-founded with the
+        PhD student that was leading the project.
+      </p>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Security Consultant at Reply"
+      subtitle="From November 2009 to December 2010 - Bergamo, Italy"
+      skills={[
+        "Sysadmin",
+        "Bash",
+        "Python",
+        "Java",
+        "JavaScript",
+        "Postgres",
+        "MySQL",
+      ]}
+    >
+      I worked as a Sysadmin with development benefits at UBI, an Italian
+      banking and financial group. There, I developed monitoring tools to ensure
+      the smooth operation of their IBM-based Identity and Access Management
+      infrastructure. Additionally, I created a Vaadin-based web application to
+      manage the setup of internal web applications.
     </TimeLineElement>
   </div>
 

@@ -5,14 +5,12 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">My Resumé</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Believe it or not, I've been doing a few things over the years. Here's the
+    same story that you can find on LinkedIn, just with a different layout.
   </div>
 
   <div class="mb-5">
@@ -21,12 +19,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Ph.D. in Information Engineering"
+      subtitle="2011 to 2015, Università degli Studi di Padova, Italy"
     />
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Master's Degree in Information Engineering"
+      subtitle="2007 to 2009, Università degli Studi di Padova, Italy"
+    />
+    <TimeLineElement
+      title="Bachelor's Degree in Information Engineering"
+      subtitle="2002 to 2007, Università degli Studi di Padova, Italy"
     />
   </div>
 
@@ -36,57 +38,154 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Principal Software Engineer - Freelance"
+      subtitle="Since January 2024 - Remote and in Berlin, Germany"
+      skills={[
+        "React Native",
+        "TypeScript",
+        "JavaScript",
+        "Playwright",
+        "GitHub Actions",
+        "ESlint",
+      ]}
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Cannot say much as I signed an NDA, but I'm working on a TV app project in
+      React Native. In this role, I'm training engineers new to the technology,
+      reviewing PRs, organizing pair programming sessions / workshops, and all
+      around sharing my knowledge of the React Native world. I also write code,
+      but mostly to improve the Developer Experience and to help build better
+      processes, with a focus on performance and testing.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Senior Frontend Developer at JustWatch"
+      subtitle="From February 2021 to March 2024 - Remote and in Berlin, Germany"
+      skills={[
+        "React Native",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "Swift",
+        "ObjectiveC",
+        "GraphQL",
+        "Cypress",
+        "Figma",
+        "Storybook",
+        "Team Leading",
+        "Product Ownership",
+      ]}
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      JustWatch is one of the biggest streaming guides in the world, helping
+      millions of users find what to watch (and where) every month. I rewrote
+      their mobile apps from scratch in React Native and led the mobile team for
+      about a year. Before that, I revamped their TV apps, also written in React
+      Native.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Senior FullStack Developer at URBI"
+      subtitle="From March 2017 to February 2021 - Berlin, Germany"
+      skills={[
+        "React Native",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "Kotlin",
+        "Spring",
+        "Spring Boot",
+        "Redis",
+        "Postgres",
+        "",
+      ]}
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Urbi is a shared mobility aggregator, guiding its users through the maze
+      of car, scooter, and bike-sharing offerings in their cities. I initially
+      worked on the Spring Boot-based backend and later moved on to rewrite
+      their mobile apps from scratch in React Native. I also developed a B2B
+      dashboard in React and its backend in Spring Boot + Kotlin, as well as a
+      React Native prototype for a digital wallet app to manage driving licenses
+      validation on Ethereum.
+    </TimeLineElement>
+    <TimeLineElement
+      title="FullStack Developer - Freelance"
+      subtitle="From July 2016 to March 2017 - Remote and in Veneto, Italy"
+      skills={[
+        "React",
+        "JavaScript",
+        "Python",
+        "Flask",
+        "SQLAlchemy",
+        "Socket.IO",
+        "Celery",
+        "Postgres",
+        "SCADA",
+      ]}
+    >
+      I developed a full stack, React + Flask application to interconnect
+      multiple monitoring systems (sensors, cameras, variable message signs,
+      traffic lights, weather stations, &hellip;) into a single administrative
+      interface. I cannot disclose the name of the company for which I did this
+      as once again, I signed an NDA. The app was used (and maybe still is?) to
+      manage a section of Italy's highway infrastructure.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Cofounder at SketchTogether"
+      subtitle="From January 2014 to December 2023 - Remote and in Orange County, California"
+      skills={[
+        "Java",
+        "JavaScript",
+        "Python",
+        "Bash",
+        "Lua",
+        "Vertx",
+        "AngularJS",
+        "Protocol Buffers",
+        "Redis",
+        "Postgres",
+        "Nginx",
+        "Sysadmin",
+        "Devops",
+      ]}
+    >
+      SketchTogether was a real-time collaborative whiteboard helping teams
+      quickly jot down ideas, with a focus on reducing mode-switching as much as
+      possible. Users would circle around parts of their sketches to quickly
+      select elements and move them around, clone them, or edit them. Despite a
+      loyal user base that let us keep SketchTogether afloat after we stopped
+      focusing on it in 2017, we decided to sunset the product in December 2023,
+      as more modern apps are now available and we no longer had the resources
+      to invest in the project. I developed the Java backend application and
+      took care of the infrastructure on Google Cloud, as well as designed the
+      web app that was implemented by the other cofounder. I eventually stepped
+      in on the web side of things as well, and later added some Python micro
+      services to support new features.
     </TimeLineElement>
   </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+    <li>TypeScript</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>Kotlin</li>
+    <li>Bash</li>
+    <li>Some Lua</li>
+    <li>Some Swift</li>
+    <li>Some ObjectiveC</li>
+    <li>React Native</li>
+    <li>React</li>
+    <li>Some Svelte</li>
+    <li>Spring</li>
+    <li>Spring Boot</li>
+    <li>UNIX Sysadmin</li>
+    <li>Some Devops</li>
+    <li>Redis</li>
+    <li>Postgres</li>
+    <li>MySQL</li>
+    <li>&hellip;and more</li>
   </ul>
 </BaseLayout>

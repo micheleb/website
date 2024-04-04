@@ -8,7 +8,7 @@ const rnFor = formatDistanceToNow(new Date("2018-06-01"));
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
+  <div class="pb-6 mt-5">
     <div class="text-xl py-1">Hi there 👋</div>
     <div class="text-5xl font-bold">I'm Michele</div>
     <div class="text-3xl py-3 font-bold">
@@ -17,8 +17,9 @@ const rnFor = formatDistanceToNow(new Date("2018-06-01"));
     <div class="py-2">
       <text class="text-lg">
         <p>
-          I'm a Software Engineer based in Berlin, Germany. I've been developing
-          web and mobile apps professionally for {developingFor} (and counting 🚀).
+          I'm a freelance Software Engineer based in Berlin, Germany. I've been
+          developing web and mobile apps professionally for {developingFor} (and
+          counting 🚀).
         </p>
         <p class="mt-4">
           Originally a Backend Developer (working with Java, Kotlin, and Python,
@@ -37,7 +38,7 @@ const rnFor = formatDistanceToNow(new Date("2018-06-01"));
         </p>
       </text>
     </div>
-    <div class="mt-8">
+    <div class="mt-2 text-center">
       <a
         class="btn"
         href="https://www.linkedin.com/in/michelebonazza/"
@@ -66,13 +67,30 @@ const rnFor = formatDistanceToNow(new Date("2018-06-01"));
     url="https://justwatch.com"
   />
   <HorizontalCard
-    title="Urbi (2017-2021)"
+    title="URBI (2017-2021)"
     img="/post_img.webp"
-    desc="Urbi is a shared mobility aggregator, guiding its users through the maze of car, scooter, and bike-sharing offerings in their cities. I initially worked on the Spring Boot-based backend and later moved on to rewrite their mobile apps from scratch in React Native."
+    desc="URBI is a shared mobility aggregator, guiding its users through the maze of car, scooter, and bike-sharing offerings in their cities. I initially worked on the Spring Boot-based backend and later moved on to rewrite their mobile apps from scratch in React Native."
     url="https://en.urbi.co/"
   />
 
-  <div class="mt-4 text-center">
+  <div class="my-4 text-center">
     <a class="btn" href="/cv" target="_self">See more</a>
   </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold my-4">My latest talks 📢</div>
+  </div>
+
+  <HorizontalCard
+    title="How JustWatch built their React Native design system with StoryBook"
+    img="/rnmeetup.webp"
+    desc="React Native Berlin Meetup, Sep 27, 2023"
+    url="https://www.youtube.com/watch?v=Rm5lAwuGF_8"
+  />
+  <HorizontalCard
+    title="React Native, as seen on TV"
+    img="/as-seen-on-tv.webp"
+    desc="React Summit 2022, Amsterdam"
+    url="https://portal.gitnation.org/contents/react-native-as-seen-on-tv"
+  />
 </BaseLayout>

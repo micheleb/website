@@ -13,7 +13,11 @@ import type { minutesInDay } from "date-fns/constants";
     <p>
       Believe it or not, I've been up to quite a bit over the years. Here's a
       more detailed account of my professional journey than what you might find
-      on LinkedIn.
+      <a
+        class="underline"
+        href="https://www.linkedin.com/in/michelebonazza/"
+        target="_blank">on LinkedIn</a
+      >.
     </p>
     <p class="my-4">
       For some reason, PDFs are still all the rage for resumés, so here's where
@@ -26,7 +30,7 @@ import type { minutesInDay } from "date-fns/constants";
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
-  <div class="time-line-container grid gap-4 mb-10">
+  <div class="time-line-container pb-10">
     <TimeLineElement
       title="Ph.D. in Information Engineering"
       subtitle="2011 to 2015, Università degli Studi di Padova, Italy"
@@ -45,8 +49,9 @@ import type { minutesInDay } from "date-fns/constants";
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
-  <div class="time-line-container mb-10">
+  <div class="time-line-container pb-10">
     <TimeLineElement
+      id="current"
       title="Principal Software Engineer - Freelance"
       subtitle="Since January 2024 - Remote and in Berlin, Germany"
       skills={[
@@ -66,6 +71,7 @@ import type { minutesInDay } from "date-fns/constants";
       build better processes, with a focus on performance and testing.
     </TimeLineElement>
     <TimeLineElement
+      id="justwatch"
       title="Senior Frontend Developer at JustWatch"
       subtitle="From February 2021 to March 2024 - Remote and in Berlin, Germany"
       skills={[
@@ -88,29 +94,40 @@ import type { minutesInDay } from "date-fns/constants";
         <a class="underline" href="https://justwatch.com" target="_blank"
           >JustWatch</a
         > is one of the largest streaming guides in the world, helping millions of
-        users find what to watch (and where) every month. I rewrote their mobile
-        apps from scratch in React Native and led the mobile team for about a year.
+        users each month find what to watch and where. I rewrote their mobile apps
+        from scratch in React Native and led the mobile team for about a year.
       </p>
       <p class="mt-2">
-        To support the new app, I also built a new Design System and Component
-        Library using Storybook, as well as a React + Node.js based tool to
+        To support the new app, I built a new Design System and Component
+        Library using Storybook. An in-depth analysis of how these were
+        developed from a designer's perspective is available on <a
+          class="underline"
+          href="https://clarazorzoli.com/justwatch"
+          target="_blank">Clara's website</a
+        >, and you can watch <a
+          class="underline"
+          href="https://www.youtube.com/watch?v=Rm5lAwuGF_8"
+          target="_blank"
+          >my talk at the React Native Berlin Meetup about this topic</a
+        >. I also created an interesting little React + Node.js based tool to
         proxy <a class="underline" href="https://snowplow.io/" target="_blank"
           >Snowplow</a
-        > events so that they can be inspected from a Desktop browser, even when
-        sent by mobile devices.
+        > events using Websockets so that they can be inspected from a Desktop browser,
+        even when sent from mobile devices.
       </p>
       <p class="mt-2">
-        Before that, I revamped their TV apps, also developed in React Native,
+        Before that, I revamped their TV apps, also using React Native,
         migrating the codebase to TypeScript and enhancing performance. This
-        allowed the apps to run on lower-end Android TV sticks and Samsung and
-        LG TVs. I developed a "Play on TV" feature connecting the TV Apps with
-        the older Vue-based mobile apps. The feature was later ported to the new
-        apps as well, and uses either Google Cast or the SSDP protocol (for Roku
-        devices), with a fallback to GraphQL Subscription based Websockets for
-        broader compatibility.
+        upgrade made it possible for the apps to run on lower-end Android TV
+        sticks, as well as on Samsung and LG TVs. I developed a "Play on TV"
+        feature that connects the TV Apps with the older Vue-based mobile apps.
+        This feature was later ported to the new apps as well, and uses either
+        Google Cast or the SSDP protocol (for Roku devices), with a fallback to
+        GraphQL Subscription-based Websockets for broader compatibility.
       </p>
     </TimeLineElement>
     <TimeLineElement
+      id="urbi"
       title="Senior FullStack Developer at URBI"
       subtitle="From March 2017 to February 2021 - Berlin, Germany"
       skills={[
@@ -138,6 +155,7 @@ import type { minutesInDay } from "date-fns/constants";
       driving license validation on the Ethereum blockchain.
     </TimeLineElement>
     <TimeLineElement
+      id="italy"
       title="FullStack Developer - Freelance"
       subtitle="From July 2016 to March 2017 - Remote and in Veneto, Italy"
       skills={[
@@ -160,6 +178,7 @@ import type { minutesInDay } from "date-fns/constants";
       still is, to manage a section of Italy's highway infrastructure.
     </TimeLineElement>
     <TimeLineElement
+      id="sketchtogether"
       title="Cofounder at SketchTogether"
       subtitle="From January 2014 to December 2023 - Remote and in Orange County, California"
       skills={[
@@ -199,6 +218,7 @@ import type { minutesInDay } from "date-fns/constants";
       </p>
     </TimeLineElement>
     <TimeLineElement
+      id="phd"
       title="PhD Student at Università di Padova"
       subtitle="From January 2011 to April 2015 - Padova, Italy (and Irvine, California)"
       skills={["Java", "Python", "Bash", "Android", "Sysadmin"]}
@@ -231,6 +251,7 @@ import type { minutesInDay } from "date-fns/constants";
       </p>
     </TimeLineElement>
     <TimeLineElement
+      id="reply"
       title="Security Consultant at Reply"
       subtitle="From November 2009 to December 2010 - Bergamo, Italy"
       skills={[

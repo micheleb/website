@@ -29,6 +29,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.9
     version: 1.11.9
+  plausible-tracker:
+    specifier: ^0.3.8
+    version: 0.3.8
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
@@ -3055,6 +3058,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: false
+
+  /plausible-tracker@0.3.8:
+    resolution: {integrity: sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==}
+    engines: {node: '>=10'}
     dev: false
 
   /postcss-import@15.1.0(postcss@8.4.32):

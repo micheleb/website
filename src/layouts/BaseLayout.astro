@@ -1,4 +1,5 @@
 ---
+import Plausible from "plausible-tracker";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -15,12 +16,23 @@ const {
   sideBarActiveItemID,
   ogType,
 } = Astro.props;
+
+if (!import.meta.env.SSR) {
+  const plausible = Plausible({ domain: "michelebonazza.com" });
+  plausible.enableAutoPageviews();
+}
 ---
 
 <!doctype html>
 <html lang="en" data-theme="lofi">
   <head>
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
+    <BaseHead
+      title={title}
+      description={description}
+      image={image}
+      ,
+      ogType={ogType}
+    />
     {TRANSITION_API && <ViewTransitions />}
   </head>
   <body>

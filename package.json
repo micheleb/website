@@ -20,6 +20,7 @@
     "daisyui": "^4.4.10",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.9",
+    "plausible-tracker": "^0.3.8",
     "sharp": "^0.32.6",
     "tailwindcss": "^3.3.5"
   },
